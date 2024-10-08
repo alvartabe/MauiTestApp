@@ -24,11 +24,19 @@
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
+            <!-- Note that we added the AutomationId attribute --> 
             <Button
                 x:Name="CounterBtn"
+                AutomationId="CounterBtn"
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="LoginBtn"
+                Text="Login" 
+                Clicked="OnLoginClicked"
                 HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>

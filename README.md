@@ -33,3 +33,53 @@ MauiTestApp is an example project demonstrating how to use Dependency Injection 
 - After a successful login, both the access token and refresh token are stored securely.
 - The `AuthService` class includes a `RefreshTokenAsync` method to obtain a new access token using the stored refresh token.
 - This ensures that users remain logged in without requiring them to manually re-authenticate, even when the access token expires.
+
+## Appium UI Testing Setup
+
+This project also includes Appium-based UI tests for iOS. To set up and run the UI tests, follow the steps below. (Android UITests in progress)
+
+### Requirements
+
+- **Node.js**: Install the latest version from [here](https://nodejs.org/).
+- **Appium**: Install globally using npm.
+- **iOS Simulator**: Ensure the iOS Simulator is running with the device specified in the `AppiumSetup.cs` file.
+- **Latest Version of Your MAUI App**: Make sure the latest build of the MAUI app is installed on the iOS Simulator.
+
+### Setup Commands
+
+Run the following commands to install Appium and its drivers:
+
+```bash
+npm install -g appium
+appium driver install uiautomator2
+appium driver install xcuitest
+```
+
+### Create the UI Test Projects
+
+To create the shared and iOS-specific test projects, use the following commands:
+
+```bash
+dotnet new nunit -n UITests.Shared
+dotnet new nunit -n UITests.iOS
+```
+
+Then, add them to your solution:
+
+```bash
+dotnet sln add UITests.Shared/UITests.Shared.csproj
+dotnet sln add UITests.iOS/UITests.iOS.csproj
+```
+
+### Running the UI Tests
+
+Once everything is set up, you can run the UI tests with the following command:
+
+```bash
+dotnet test
+```
+
+However, before running the tests, ensure that:
+
+1. The iOS simulator specified in the `AppiumSetup.cs` file is running.
+2. The latest version of your MAUI should be installed on the simulator, otherwise, the tests won't work correctly.

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiTestApp", "MauiTestApp\MauiTestApp.csproj", "{303BA3CD-D263-423E-B2EB-2C3B547E754C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITests.iOS", "UITests.iOS\UITests.iOS.csproj", "{BADA979A-98FE-4BF6-8BC7-B5D8D4B78431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITests.Shared", "UITests.Shared\UITests.Shared.csproj", "{08686170-585C-41EA-85A0-F82002E28DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{303BA3CD-D263-423E-B2EB-2C3B547E754C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{303BA3CD-D263-423E-B2EB-2C3B547E754C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{303BA3CD-D263-423E-B2EB-2C3B547E754C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BADA979A-98FE-4BF6-8BC7-B5D8D4B78431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BADA979A-98FE-4BF6-8BC7-B5D8D4B78431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BADA979A-98FE-4BF6-8BC7-B5D8D4B78431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BADA979A-98FE-4BF6-8BC7-B5D8D4B78431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08686170-585C-41EA-85A0-F82002E28DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08686170-585C-41EA-85A0-F82002E28DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08686170-585C-41EA-85A0-F82002E28DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08686170-585C-41EA-85A0-F82002E28DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
