@@ -18,8 +18,8 @@ namespace MauiTestApp.Services
             {
                 Authority = "https://auth.livetula.com",
                 ClientId = "mobile-client",
-                RedirectUri = "myapp://callback",
-                Scope = "scope openid offline_access gateway-api",
+                RedirectUri = "com.livetula.livetulamobile://login",
+                Scope = "openid offline_access gateway-api",
                 Browser = new WebAuthenticatorBrowser()
             };
 

@@ -33,7 +33,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>myapp</string>
+				<string>com.livetula.livetulamobile</string>
 			</array>
 		</dict>
 	</array>
