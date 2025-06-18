@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using MauiTestApp.Services;
 using MauiTestApp.ViewModel;
-
 namespace MauiTestApp;
 
 public static class MauiProgram
@@ -17,10 +16,16 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-			builder.Services.AddSingleton<IAuthService, AuthService>();
-			builder.Services.AddSingleton<LoginViewModel>();
-			builder.Services.AddSingleton<MainPage>();
+		builder.Services.AddSingleton<IAuthService, AuthService>();
+		builder.Services.AddSingleton<MainPageViewModel>();
+		builder.Services.AddSingleton<MainPage>();
 
+#if IOS
+		builder.ConfigureMauiHandlers(handlers =>
+		{
+    		handlers.AddHandler<Microsoft.Maui.Controls.WebView, InspectableWebViewHandler>();
+		});
+#endif
 #if DEBUG
 		//builder.Logging.AddDebug();
 #endif
@@ -28,3 +33,4 @@ public static class MauiProgram
 		return builder.Build();
 	}
 }
+

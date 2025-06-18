@@ -5,11 +5,11 @@ using Microsoft.Maui.Controls;
 
 namespace MauiTestApp.ViewModel
 {
-    public class LoginViewModel
+    public class MainPageViewModel
     {
         private readonly IAuthService _authService;
 
-        public LoginViewModel(IAuthService authService)
+        public MainPageViewModel(IAuthService authService)
         {
             _authService = authService;
             LoginCommand = new Command(async () => await LoginAsync());

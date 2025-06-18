@@ -14,16 +14,7 @@ namespace MauiTestApp.Services
 
         public AuthService()
         {
-            var options = new OidcClientOptions
-            {
-                Authority = "https://auth.livetula.com",
-                ClientId = "mobile-client",
-                RedirectUri = "com.livetula.livetulamobile://login",
-                Scope = "openid offline_access gateway-api",
-                Browser = new WebAuthenticatorBrowser()
-            };
 
-            _oidcClient = new OidcClient(options);
         }
 
         public async Task<LoginResult> LoginAsync()

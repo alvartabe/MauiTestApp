@@ -38,6 +38,12 @@
                 Text="Login" 
                 Clicked="OnLoginClicked"
                 HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="WebViewBtn"
+                Text="Pay With GooglePay" 
+                Clicked="OnGooglePayClicked"
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
