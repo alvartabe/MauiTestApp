@@ -12,7 +12,7 @@ public class MainActivity : MauiAppCompatActivity
 {
 
     GooglePayPaymentMethodLauncher googlePayLauncher;
-    const string PUBLISHABLE_KEY = "pk_test_xxxxx";
+    const string PUBLISHABLE_KEY = "pk_test_xxxxx"; // replace with stripe PUBLISHABLE_KEY from the endpoint
     bool IsGooglePayReady;
     long amount = 1000;
 
@@ -22,6 +22,7 @@ public class MainActivity : MauiAppCompatActivity
 
         WeakReferenceMessenger.Default.Register<PayViaGooglePayMessage>(this, (recipient, message) =>
         {
+            // Triggered by tapping the button in the UI
             googlePayLauncher.Present("USD", amount);
         });
 
@@ -44,6 +45,7 @@ public class MainActivity : MauiAppCompatActivity
 
     private void OnGooglePayReady(bool isGooglePayReady)
     {
+        // Decide whether to show the Google Pay button
         IsGooglePayReady = isGooglePayReady;
     }
 
@@ -51,6 +53,7 @@ public class MainActivity : MauiAppCompatActivity
     {
         if (result is GooglePayPaymentMethodLauncher.Result.Completed completed)
         {
+            // Send this token to the backend to finalize the transaction
             var token = completed.PaymentMethod.id_;
         }
          else if (result is GooglePayPaymentMethodLauncher.Result.Canceled)
